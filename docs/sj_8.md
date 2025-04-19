@@ -1,7 +1,7 @@
 Télécharger le sujet : [Voir le PDF du sujet](pdf/08_25-NSI-8.pdf)
 <br>
 
-Télécharger tous les sujets : [Voir le PDF de tous sujets](25-NSI-1_merged.pdf)
+Télécharger tous les sujets : [Voir le PDF de tous les sujets](25-NSI-1_merged.pdf)
 
 ---
 

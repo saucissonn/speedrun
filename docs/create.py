@@ -1,16 +1,17 @@
-import re
+import os
 
-with open("every.md", "r", encoding="utf-8") as f:
-    contenu = f.read()
+for i in range(1, 49):
+    md_filename = f"sj_{i}.md"
+    
+    if os.path.isfile(md_filename):
+        with open(md_filename, "r", encoding="utf-8") as f:
+            contenu = f.read()
 
-# Remplace chaque chemin sujetX-Y.py par sujetX-Y-Copie.py
-nouveau_contenu = re.sub(
-    r"\{\{ IDE\('exercices_python/(sujet\d+-\d+)\.py'\) \}\}",
-    r"{{ IDE('exercices_python/\1-Copie.py') }}",
-    contenu
-)
+        nouveau_texte = contenu.replace("Voir le PDF de tous sujets", "Voir le PDF de tous les sujets")
 
-with open("every.md", "w", encoding="utf-8") as f:
-    f.write(nouveau_contenu)
+        with open(md_filename, "w", encoding="utf-8") as f:
+            f.write(nouveau_texte)
 
-print("✅ Tous les chemins ont été mis à jour dans every.md.")
+        print(f"✔️ Modifié : {md_filename}")
+    else:
+        print(f"⚠️ Fichier introuvable : {md_filename}")
