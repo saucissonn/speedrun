@@ -6,13 +6,10 @@ Bonjour, ce site regroupe tous les sujets d'épreuve pratique du BAC de NSI 2025
 
 <div style="align-items:top;font-size: 1.2rem;">
 Liste des problèmes bientôt corrigés :
-</div>
-
--Les PDF individuels ne sont pas mis.
 <br>
--Autre problème à corriger.
+-Pas de timer pour le speedrun.
 <br>
--Tests non faits pour les exercices :
+-Tests publiques non / partiellement faits pour les exercices :
 <ul>
     <li>sujet 25 exercice 2</li>
     <li>sujet 26 exercice 2</li>
