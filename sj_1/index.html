@@ -1,0 +1,1552 @@
+<!--
+pyodide-mkdocs-theme
+Copyleft GNU GPLv3 🄯 2024 Frédéric Zinelli
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.
+If not, see <https://www.gnu.org/licenses/>.
+-->
+
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../ex_test/">
+      
+      
+        <link rel="next" href="../sj_2/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>Sujet 1 - NSI SPEEDRUN</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+
+<script type="importmap">{"imports": {"functools": "../js-libs/functools.js", "jsLogger": "../js-libs/jsLogger.js", "process_and_gui": "../js-libs/process_and_gui.js", "0-generic-python-snippets-pyodide": "../js-per-pages/0-generic-python-snippets-pyodide.js", "1-error_logs-pyodide": "../js-per-pages/1-error_logs-pyodide.js", "1-packagesInstaller-install-pyodide": "../js-per-pages/1-packagesInstaller-install-pyodide.js", "1-runtimeManager-runtime-pyodide": "../js-per-pages/1-runtimeManager-runtime-pyodide.js", "2-pyodideSectionsRunner-runner-pyodide": "../js-per-pages/2-pyodideSectionsRunner-runner-pyodide.js", "3-btnRunner-py_btn": "../js-per-pages/3-btnRunner-py_btn.js", "3-terminalRunner-term": "../js-per-pages/3-terminalRunner-term.js", "4-0-ideManager-ide": "../js-per-pages/4-0-ideManager-ide.js", "4-ideLogistic-ide": "../js-per-pages/4-ideLogistic-ide.js", "4-ideRunner-ide": "../js-per-pages/4-ideRunner-ide.js", "5-ideTester-ides_test": "../js-per-pages/5-ideTester-ides_test.js", "qcms-qcm": "../js-per-pages/qcms-qcm.js", "start-pyodide": "../js-per-pages/start-pyodide.js", "overlord": "../js-scripts/overlord.js", "subscriptions": "../js-scripts/subscriptions.js"}}</script>
+
+
+
+      
+    
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" type="text/javascript"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" type="text/javascript"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.43.1/css/jquery.terminal.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" rel="stylesheet"/>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" rel="stylesheet"/>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.43.1/js/jquery.terminal.min.js" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" type="text/javascript"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.7/ace.min.js" integrity="sha512-GQpIYSKNIPIC763JKTNALj+t18/nfLdzw5gITgFGa31aK/4NmjyPKsfqrjh7CuzpJaG3nqEleeVcWUhHad9Axg==" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" type="text/javascript"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.7/ext-language_tools.min.js" integrity="sha512-iK7yTkCkv7MbFwTqRgHTbmIqoiiLq6BsyNjymnFyB5a7pEQwYThj9QIgqBy9+XPPwj7+hAEHyR2npOHL1bz4Qg==" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" type="text/javascript"></script>
+
+<script src="https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" type="text/javascript"></script>
+
+<script src="../js-libs/0-config.js" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" type="text/javascript"></script>
+
+<script type="text/javascript">
+if(!window.CONFIG) window.CONFIG={}
+CONFIG.argsFigureDivId="figure1"
+CONFIG.exportZipWithNames=false
+CONFIG.exportZipPrefix=""
+CONFIG.baseUrl=".."
+CONFIG.buttonIconsDirectory="../assets\\images"
+CONFIG.editorFontFamily="monospace"
+CONFIG.editorFontSize=15
+CONFIG.inServe=false
+CONFIG.language="fr"
+CONFIG.pmtUrl="https://gitlab.com/frederic-zinelli/pyodide-mkdocs-theme"
+CONFIG.pythonLibs=[]
+CONFIG.siteUrl=""
+CONFIG.version="4.3.2"
+CONFIG.lang={"tests": {"msg": "\n\n# Tests\n\n", "as_pattern": "#\\s*Tests"}, "comments": {"em": 17, "msg": "(D\u00e9s-)Active le code apr\u00e8s la ligne <code># Tests</code> (insensible \u00e0 la casse)<br>(<kbd>Ctrl</kbd>+<kbd>I</kbd>)", "kbd": "Ctrl+I"}, "splitScreen": {"em": 23, "msg": "Entrer ou sortir du mode \"deux colonnes\"<br>(<kbd>Alt+:</kbd> ; <kbd>Ctrl</kbd> pour inverser les colonnes)", "kbd": ""}, "splitModePlaceholder": {"msg": "\u00c9diteur dans l'autre colonne"}, "fullScreen": {"em": 10, "msg": "Entrer ou sortir du mode \"plein \u00e9cran\"<br>(<kbd>Esc</kbd>)", "kbd": "Esc"}, "feedback": {"em": 19, "msg": "Tronquer ou non le feedback dans les terminaux (sortie standard & stacktrace / relancer le code pour appliquer)", "kbd": ""}, "wrapTerm": {"em": 19, "msg": "Si activ\u00e9, le texte copi\u00e9 dans le terminal est joint sur une seule ligne avant d'\u00eatre copi\u00e9 dans le presse-papier", "kbd": ""}, "runScript": {"msg": "Script lanc\u00e9...", "format": "info"}, "installStart": {"msg": "Installation de paquets python. Ceci peut prendre un certain temps...", "format": "info"}, "installDone": {"msg": "Installations termin\u00e9es !", "format": "info"}, "refresh": {"msg": "Une version plus r\u00e9cente du code existe.\nVeuillez copier vos \u00e9ventuelles modifications puis r\u00e9initialiser l'IDE.", "format": "warning"}, "validation": {"msg": "Validation - ", "format": "info"}, "editorCode": {"msg": "\u00c9diteur", "format": "info"}, "publicTests": {"msg": "Tests publics", "format": "info"}, "secretTests": {"msg": "Tests secrets", "format": "info"}, "successMsg": {"msg": "OK", "format": "success"}, "successMsgNoTests": {"msg": "Termin\u00e9 sans erreur.", "format": "info"}, "unforgettable": {"msg": "N'oubliez pas de faire une validation !", "format": "warning"}, "successHead": {"msg": "Bravo !", "format": "success"}, "successHeadExtra": {"msg": "Vous avez r\u00e9ussi tous les tests !"}, "successTail": {"msg": "Pensez \u00e0 lire"}, "failHead": {"msg": "Dommage !", "format": "warning"}, "revealCorr": {"msg": "le corrig\u00e9"}, "revealJoin": {"msg": "et"}, "revealRem": {"msg": "les commentaires"}, "failTail": {"msg": "est maintenant disponible", "plural": "sont maintenant disponibles"}, "titleCorr": {"msg": "Solution"}, "titleRem": {"msg": "Remarques"}, "corr": {"msg": "\ud83d\udc0d Proposition de correction"}, "rem": {"msg": "Remarques"}, "pyBtn": {"em": 9, "msg": "Ex\u00e9cuter le code", "kbd": ""}, "play": {"em": 9, "msg": "Ex\u00e9cuter le code<br>(<kbd>Ctrl</kbd>+<kbd>S</kbd>)", "kbd": "Ctrl+S"}, "check": {"em": 9, "msg": "Valider<br><kbd>Ctrl</kbd>+<kbd>Enter</kbd><br>(Clic droit pour l'historique)", "kbd": ""}, "download": {"em": 0, "msg": "T\u00e9l\u00e9charger", "kbd": ""}, "upload": {"em": 0, "msg": "T\u00e9l\u00e9verser", "kbd": ""}, "restart": {"em": 0, "msg": "R\u00e9initialiser l'\u00e9diteur", "kbd": ""}, "save": {"em": 0, "msg": "Sauvegarder dans le navigateur", "kbd": ""}, "zip": {"em": 14, "msg": "Archiver les codes des IDEs exportables de la page", "kbd": ""}, "corrBtn": {"em": 0, "msg": "Tester la correction (serve)", "kbd": ""}, "show": {"em": 0, "msg": "Afficher corr & REMs", "kbd": ""}, "attemptsLeft": {"msg": "\u00c9valuations restantes"}, "testsDone": {"msg": "Tests termin\u00e9s", "format": "info"}, "testIdes": {"em": 7, "msg": "Lance tous les tests...", "kbd": ""}, "testStop": {"em": 6, "msg": "Arr\u00eate les tests", "kbd": ""}, "test1Ide": {"em": 7, "msg": "Lance ce test", "kbd": ""}, "loadIde": {"em": 10, "msg": "Configure l'IDE avec ces donn\u00e9es", "kbd": ""}, "qcmTitle": {"msg": "Question", "plural": "Questions"}, "qcmMaskTip": {"em": 11, "msg": "Les r\u00e9ponses resteront cach\u00e9es...", "kbd": ""}, "qcmCheckTip": {"em": 11, "msg": "V\u00e9rifier les r\u00e9ponses", "kbd": ""}, "qcmRedoTip": {"em": 9, "msg": "Recommencer", "kbd": ""}, "tipTrash": {"em": 15, "msg": "Supprimer du navigateur les codes enregistr\u00e9s pour NSI SPEEDRUN", "kbd": ""}, "figureAdmoTitle": {"msg": "Votre figure"}, "figureText": {"msg": "Votre trac\u00e9 sera ici"}, "p5Start": {"em": 0, "msg": "D\u00e9marre l'animation", "kbd": ""}, "p5Stop": {"em": 0, "msg": "Arr\u00eate l'animation", "kbd": ""}, "p5Step": {"em": 0, "msg": "Avance d'une image", "kbd": ""}, "pickerFailure": {"msg": "Veuillez cliquer sur la page entre deux utilisations des raccourcis clavier ou utiliser un bouton, afin de pouvoir t\u00e9l\u00e9verser un fichier."}, "zipAskForNames": {"msg": "Veuillez pr\u00e9ciser votre/vos noms (cha\u00eene vide interdite) :"}}
+</script>
+<script src="../js-libs/0-legacy-subscriber.js" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" type="text/javascript"></script>
+
+<script src="../js-libs/functools.js" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" type="module"></script>
+
+<script src="../js-libs/jsLogger.js" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" type="module"></script>
+
+<script src="../js-libs/mathjax-libs.js" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" type="text/javascript"></script>
+
+<script src="../js-libs/process_and_gui.js" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" type="module"></script>
+
+<link href="../pyodide-css/0-generic.css" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" rel="stylesheet"/>
+
+<link href="../pyodide-css/btns-header.css" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" rel="stylesheet"/>
+
+<link href="../pyodide-css/history.css" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" rel="stylesheet"/>
+
+<link href="../pyodide-css/hourglass.css" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" rel="stylesheet"/>
+
+<link href="../pyodide-css/ide.css" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" rel="stylesheet"/>
+
+<link href="../pyodide-css/qcm.css" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" rel="stylesheet"/>
+
+<link href="../pyodide-css/terminal.css" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" rel="stylesheet"/>
+
+<link href="../pyodide-css/testing.css" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" rel="stylesheet"/>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" type="text/javascript"></script>
+
+<input type="checkbox" id="ace_palette" autocomplete="off" class="md-toggle" data-ace-dark-mode="tomorrow_night_bright" data-ace-light-mode="crimson_editor">
+
+
+    
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="dark-blue" data-md-color-accent="dark-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href=".." title="NSI SPEEDRUN" class="md-header__button md-logo" aria-label="NSI SPEEDRUN" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NSI SPEEDRUN
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Sujet 1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="dark-blue" data-md-color-accent="dark-blue"  aria-label="Passer au mode nuit"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Passer au mode nuit" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="dark-blue" data-md-color-accent="dark-blue"  aria-label="Passer au mode jour"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passer au mode jour" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="NSI SPEEDRUN" class="md-nav__button md-logo" aria-label="NSI SPEEDRUN" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    NSI SPEEDRUN
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Accueil
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ex_test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    En construction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 1
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 6
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 7
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 8
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 9
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 10
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 11
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 12
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 13
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 14
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 15
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 16
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 17
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 18
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 19
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 20
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_21/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 21
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_22/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 22
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 23
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_24/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 24
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_25/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 25
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_26/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 26
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_27/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 27
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_28/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 28
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 29
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_30/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 30
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_31/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 31
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_32/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 32
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_33/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 33
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_34/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 34
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_35/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 35
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_36/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 36
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_37/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 37
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_38/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 38
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_39/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 39
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_40/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 40
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_41/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 41
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_42/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 42
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_43/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 43
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_44/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 44
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_45/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 45
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_46/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 46
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_47/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 47
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sj_48/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sujet 48
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+
+
+                  
+
+
+  <h1>Sujet 1</h1>
+
+<p>Télécharger le sujet : <a href="../25-NSI-1.pdf">Voir le PDF du sujet</a>
+<br></p>
+<p>Télécharger tous les sujets : <a href="../25-NSI-1_merged.pdf">Voir le PDF de tous sujets</a></p>
+<hr />
+<div style="display:flex;gap:2em;align-items:top;font-size: 1.2rem;">
+Exercice 1, écrire le code de la fonction demandée :
+</div>
+
+<div style="margin-top: 2em;"></div>
+
+<div id="global_editor_7b01557f925ab62081814ada0fdd5ecd60b60b2c" class="py_mk_ide"><div class="py_mk_wrapper md-typeset"><div class="comment_py_mk_wrapper"><div is_v="false" mode="" id="editor_7b01557f925ab62081814ada0fdd5ecd60b60b2c"></div><span id="comment_editor_7b01557f925ab62081814ada0fdd5ecd60b60b2c" class="comment tooltip">###<span style="--tool_shift: 95%;width:17em;" class="tooltiptext bottom">(Dés-)Active le code après la ligne <code># Tests</code> (insensible à la casse)<br>(<kbd>Ctrl</kbd>+<kbd>I</kbd>)</span></span><div class="ide-split-screen tooltip svg-switch-btn twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">   <path d="M3,3H11V5H3V3M13,3H21V5H13V3M3,7H11V9H3V7M13,7H21V9H13V7M3,11H11V13H3V11M13,11H21V13H13V11M3,15H11V17H3V15M13,15H21V17H13V15M3,19H11V21H3V19M13,19H21V21H13V19Z" /> </svg><span style="--tool_shift: 95%;width:23em;" class="tooltiptext bottom">Entrer ou sortir du mode "deux colonnes"<br>(<kbd>Alt+:</kbd> ; <kbd>Ctrl</kbd> pour inverser les colonnes)</span></div><div class="ide-full-screen tooltip svg-switch-btn twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">   <path d="M17 4H20C21.1 4 22 4.9 22 6V8H20V6H17V4M4 8V6H7V4H4C2.9 4 2 4.9 2 6V8H4M20 16V18H17V20H20C21.1 20 22 19.1 22 18V16H20M7 18H4V16H2V18C2 19.1 2.9 20 4 20H7V18M18 8H6V16H18V8Z" /> </svg><span style="--tool_shift: 95%;width:10em;" class="tooltiptext bottom">Entrer ou sortir du mode "plein écran"<br>(<kbd>Esc</kbd>)</span></div></div><div style="--n-buttons:2" class="term_wrapper"><div is_v="False" style="line-height:24px;--n-lines:10;" id="term_editor_7b01557f925ab62081814ada0fdd5ecd60b60b2c" class="term_editor py_mk_terminal"></div><div class="term_btns_wrapper"><div class="twemoji stdout-ctrl tooltip"><svg viewBox="0 0 24 24" fill="none"     stroke="var(--md-default-fg-color)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"     xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"> <g>   <path d="M 4,21.4 V 2.6 C 4,2.3 4.3,2 4.6,2 h 11.65 c 0.16,0 0.31,0.06 0.42,0.18 l 3.15,3.15 C 19.94,5.44 20,5.59 20,5.75 V 21.4 C 20,21.73 19.73,22 19.4,22 H 4.6 C 4.3,22 4,21.73 4,21.4 Z" ></path>   <path d="M 16,5.4 V 2.35 C 16,2.16 16.16,2 16.35,2 c 0.09,0 0.18,0.03 0.25,0.10 l 3.29,3.29 C 19.96,5.46 20,5.55 20,5.65 20,5.84 19.84,6 19.65,6 H 16.6 C 16.27,6 16,5.73 16,5.4 Z" ></path>   <path d="m 8,9.25 h 8" ></path>   <path d="M 7.9,13.25 H 15.9"></path>   <path d="M 7.9,11.25 H 14.4" ></path>   <path d="M 7.9,19.25 H 14.4" ></path>   <path d="m 7.9,15.25 h 8" ></path>   <path d="M 7.9,17.25 H 11.9" ></path>   <path d="m 8,5.25 h 4" ></path>   <path d="m 8,7.25 h 4" ></path> </g> <g><path class="stdout-x-ray-svg" d="M 3,11.4 v 6 L 21,13.8 V 7.7 Z" style="fill:var(--md-default-bg-color);stroke-width:0;" ></path></g> </svg><span style="--tool_shift: 97%;width:19em;" class="tooltiptext bottom">Tronquer ou non le feedback dans les terminaux (sortie standard & stacktrace / relancer le code pour appliquer)</span></div><div class="stdout-wraps-btn tooltip svg-switch-btn twemoji deactivated"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> <path d="M7 21H5V3h2v18m7-18h-2v6h2V3m0 12h-2v6h2v-6m5-3-3-3v2H9v2h7v2l3-3Z"> </path></svg><span style="--tool_shift: 97%;width:19em;" class="tooltiptext bottom">Si activé, le texte copié dans le terminal est joint sur une seule ligne avant d'être copié dans le presse-papier</span></div></div></div></div><div class="ide_buttons_div_wrapper"><div class="ide_buttons_div"><button type="button" btn_kind="play" style="margin-left:0.2em; margin-right:0.2em;" class="tooltip "><img src="..\assets\images\icons8-play-64.png" class="skip_light_box" /><span style="--tool_shift: 50%;width:9em;" class="tooltiptext bottom">Exécuter le code<br>(<kbd>Ctrl</kbd>+<kbd>S</kbd>)</span></button><button type="button" btn_kind="check" style="margin-left:0.2em; margin-right:0.2em;" class="tooltip "><img src="..\assets\images\icons8-check-64.png" class="skip_light_box" /><span style="--tool_shift: 50%;width:9em;" class="tooltiptext bottom">Valider<br><kbd>Ctrl</kbd>+<kbd>Enter</kbd><br>(Clic droit pour l'historique)</span></button><button type="button" btn_kind="download" style="margin-left:1em; margin-right:0.2em;" class="tooltip "><img src="..\assets\images\icons8-download-64.png" class="skip_light_box" /><span style="--tool_shift: 50%;" class="tooltiptext bottom">Télécharger</span></button><button type="button" btn_kind="upload" style="margin-left:0.2em; margin-right:1em;" class="tooltip "><img src="..\assets\images\icons8-upload-64.png" class="skip_light_box" /><span style="--tool_shift: 50%;" class="tooltiptext bottom">Téléverser</span></button><button type="button" btn_kind="restart" style="margin-left:0.2em; margin-right:0.2em;" class="tooltip "><img src="..\assets\images\icons8-restart-64.png" class="skip_light_box" /><span style="--tool_shift: 50%;" class="tooltiptext bottom">Réinitialiser l'éditeur</span></button><button type="button" btn_kind="save" style="margin-left:0.2em; margin-right:0.2em;" class="tooltip "><img src="..\assets\images\icons8-save-64.png" class="skip_light_box" /><span style="--tool_shift: 50%;" class="tooltiptext bottom">Sauvegarder dans le navigateur</span></button></div><div class="compteur_wrapper"><div class="compteur"><span class="compteur_txt">Évaluations restantes : </span><span id="compteur_editor_7b01557f925ab62081814ada0fdd5ecd60b60b2c">5</span>/<span id="compteur_editor_7b01557f925ab62081814ada0fdd5ecd60b60b2c-low">5</span></div></div></div></div>
+
+<div class="py_mk_hidden" data-search-exclude="data-search-exclude" id="solution_editor_7b01557f925ab62081814ada0fdd5ecd60b60b2c">
+.128013l/(36hyif,cSm=2dwtj_xpko)]vne[rg.aub 5sP:14050q0D0s0I0i0b0N0L0l0b0I0N0N0o010s0i0w010406050N0J0n0n0I0F0h040m0y0b0J0,0y0C050c0?0^0`0|0;0w04051c151f0c1c0;0q0i0B0!0$0(0*0g0i0G0g0b1t0g0s0/050V0K0b0D1o0%0)011s1u1w1u0s1C1E1A0s0F1d0s0g0!0 0N0w0I0C0*0p011G1q010j0X0D0C0I0n0D1A1Z1#1*1I1-1E1:1=0/0a0L0O0F0y0w0y0N0i120C0L0T1X0F0F0D0l2a151^0C1d0c1V2n1S1U1T1B0q1`0*1w0C1/271A1l1n0#1H2x0i2z0C0y2D1A0w2g1d2l2n2R0=1!2b2F1+2K0F0_0b0/0Q2k2V0:2U1_2X1I2Z2#0/0p2)1#2+2l2w012:0I2$040e2@2m0;2`2.0*2}2 0R322_2V2{380/0M3b343d362|0y2!2~0/0f3b1g2P152D2q0q1U2v3l0l2L1?1d3w1e3u2T162*053C0T2Q3k1p1I0x0/0T0j3s353R0*0r0/0L3X3Q2G2|0j0/0B0y0i280C0N0u1/1S1#0s0N3(2-3Z010.040d3}2W3 0C0/0I0q0t442{410k3b3%3Y3*47040v4c3l410z0P3i0L4t4h3)2Y0/0s4g2,453*0y0/0o4A4i1+410E0A4s4u4B2{3T040j3n4H4w2/0/0i4V3~4D3#042I4!4C2Y0K0/0F1#0G0D4n3 41433K2^4P3l0C4-041}4?3*4^524x04494b4`2m4|4@0/0z4q4N4u4O4I3S4Y3W5a044v4#564m5o5q4+1I0y4%4)5u5c4j484a551I4K5G374Y5J400/0A4r5o065i5T5j4W5K044z5o5C1+4E040H5M4k0I0w0w1/0q5M545!5k5X4Z5?5W5N040z5h5v4Q4.0U0J0F145B5@2|4y3i153N0D2n2O6e3v1m3x2q2t2o0I1D6h0c3w0;6r0U0W0Y04.
+</div>
+<hr />
+<div style="display:flex;gap:2em;align-items:top;font-size: 1.2rem;">
+Exercice 2, compléter le code de la fonction (ou les fonctions) demandée(s) :
+</div>
+
+<div style="margin-top: 2em;"></div>
+
+<div id="global_editor_3f382f5c549a3559b7598db238326596b7bed664" class="py_mk_ide"><div class="py_mk_wrapper md-typeset"><div class="comment_py_mk_wrapper"><div is_v="false" mode="" id="editor_3f382f5c549a3559b7598db238326596b7bed664"></div><span id="comment_editor_3f382f5c549a3559b7598db238326596b7bed664" class="comment tooltip">###<span style="--tool_shift: 95%;width:17em;" class="tooltiptext bottom">(Dés-)Active le code après la ligne <code># Tests</code> (insensible à la casse)<br>(<kbd>Ctrl</kbd>+<kbd>I</kbd>)</span></span><div class="ide-split-screen tooltip svg-switch-btn twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">   <path d="M3,3H11V5H3V3M13,3H21V5H13V3M3,7H11V9H3V7M13,7H21V9H13V7M3,11H11V13H3V11M13,11H21V13H13V11M3,15H11V17H3V15M13,15H21V17H13V15M3,19H11V21H3V19M13,19H21V21H13V19Z" /> </svg><span style="--tool_shift: 95%;width:23em;" class="tooltiptext bottom">Entrer ou sortir du mode "deux colonnes"<br>(<kbd>Alt+:</kbd> ; <kbd>Ctrl</kbd> pour inverser les colonnes)</span></div><div class="ide-full-screen tooltip svg-switch-btn twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">   <path d="M17 4H20C21.1 4 22 4.9 22 6V8H20V6H17V4M4 8V6H7V4H4C2.9 4 2 4.9 2 6V8H4M20 16V18H17V20H20C21.1 20 22 19.1 22 18V16H20M7 18H4V16H2V18C2 19.1 2.9 20 4 20H7V18M18 8H6V16H18V8Z" /> </svg><span style="--tool_shift: 95%;width:10em;" class="tooltiptext bottom">Entrer ou sortir du mode "plein écran"<br>(<kbd>Esc</kbd>)</span></div></div><div style="--n-buttons:2" class="term_wrapper"><div is_v="False" style="line-height:24px;--n-lines:10;" id="term_editor_3f382f5c549a3559b7598db238326596b7bed664" class="term_editor py_mk_terminal"></div><div class="term_btns_wrapper"><div class="twemoji stdout-ctrl tooltip"><svg viewBox="0 0 24 24" fill="none"     stroke="var(--md-default-fg-color)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"     xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"> <g>   <path d="M 4,21.4 V 2.6 C 4,2.3 4.3,2 4.6,2 h 11.65 c 0.16,0 0.31,0.06 0.42,0.18 l 3.15,3.15 C 19.94,5.44 20,5.59 20,5.75 V 21.4 C 20,21.73 19.73,22 19.4,22 H 4.6 C 4.3,22 4,21.73 4,21.4 Z" ></path>   <path d="M 16,5.4 V 2.35 C 16,2.16 16.16,2 16.35,2 c 0.09,0 0.18,0.03 0.25,0.10 l 3.29,3.29 C 19.96,5.46 20,5.55 20,5.65 20,5.84 19.84,6 19.65,6 H 16.6 C 16.27,6 16,5.73 16,5.4 Z" ></path>   <path d="m 8,9.25 h 8" ></path>   <path d="M 7.9,13.25 H 15.9"></path>   <path d="M 7.9,11.25 H 14.4" ></path>   <path d="M 7.9,19.25 H 14.4" ></path>   <path d="m 7.9,15.25 h 8" ></path>   <path d="M 7.9,17.25 H 11.9" ></path>   <path d="m 8,5.25 h 4" ></path>   <path d="m 8,7.25 h 4" ></path> </g> <g><path class="stdout-x-ray-svg" d="M 3,11.4 v 6 L 21,13.8 V 7.7 Z" style="fill:var(--md-default-bg-color);stroke-width:0;" ></path></g> </svg><span style="--tool_shift: 97%;width:19em;" class="tooltiptext bottom">Tronquer ou non le feedback dans les terminaux (sortie standard & stacktrace / relancer le code pour appliquer)</span></div><div class="stdout-wraps-btn tooltip svg-switch-btn twemoji deactivated"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> <path d="M7 21H5V3h2v18m7-18h-2v6h2V3m0 12h-2v6h2v-6m5-3-3-3v2H9v2h7v2l3-3Z"> </path></svg><span style="--tool_shift: 97%;width:19em;" class="tooltiptext bottom">Si activé, le texte copié dans le terminal est joint sur une seule ligne avant d'être copié dans le presse-papier</span></div></div></div></div><div class="ide_buttons_div_wrapper"><div class="ide_buttons_div"><button type="button" btn_kind="play" style="margin-left:0.2em; margin-right:0.2em;" class="tooltip "><img src="..\assets\images\icons8-play-64.png" class="skip_light_box" /><span style="--tool_shift: 50%;width:9em;" class="tooltiptext bottom">Exécuter le code<br>(<kbd>Ctrl</kbd>+<kbd>S</kbd>)</span></button><button type="button" btn_kind="check" style="margin-left:0.2em; margin-right:0.2em;" class="tooltip "><img src="..\assets\images\icons8-check-64.png" class="skip_light_box" /><span style="--tool_shift: 50%;width:9em;" class="tooltiptext bottom">Valider<br><kbd>Ctrl</kbd>+<kbd>Enter</kbd><br>(Clic droit pour l'historique)</span></button><button type="button" btn_kind="download" style="margin-left:1em; margin-right:0.2em;" class="tooltip "><img src="..\assets\images\icons8-download-64.png" class="skip_light_box" /><span style="--tool_shift: 50%;" class="tooltiptext bottom">Télécharger</span></button><button type="button" btn_kind="upload" style="margin-left:0.2em; margin-right:1em;" class="tooltip "><img src="..\assets\images\icons8-upload-64.png" class="skip_light_box" /><span style="--tool_shift: 50%;" class="tooltiptext bottom">Téléverser</span></button><button type="button" btn_kind="restart" style="margin-left:0.2em; margin-right:0.2em;" class="tooltip "><img src="..\assets\images\icons8-restart-64.png" class="skip_light_box" /><span style="--tool_shift: 50%;" class="tooltiptext bottom">Réinitialiser l'éditeur</span></button><button type="button" btn_kind="save" style="margin-left:0.2em; margin-right:0.2em;" class="tooltip "><img src="..\assets\images\icons8-save-64.png" class="skip_light_box" /><span style="--tool_shift: 50%;" class="tooltiptext bottom">Sauvegarder dans le navigateur</span></button></div><div class="compteur_wrapper"><div class="compteur"><span class="compteur_txt">Évaluations restantes : </span><span id="compteur_editor_3f382f5c549a3559b7598db238326596b7bed664">5</span>/<span id="compteur_editor_3f382f5c549a3559b7598db238326596b7bed664-low">5</span></div></div></div></div>
+
+<div class="py_mk_hidden" data-search-exclude="data-search-exclude" id="solution_editor_3f382f5c549a3559b7598db238326596b7bed664">
+.128013l/(36hyi8f,cSm=02dqwt_pko)év;]ne[+rg.a79Rub 5sP:14050s0G0v0M0i0b0U0S0m0b0M0U0U0p010v0i0x010406050U0Q0o0o0M0J0h040n0z0b0Q0?0z0F050c0}0 11130{0x04051j1c1m0c1j0{0s0i0C0+0-0/0;0g0i0K0g0b1A0g0v0_050$0R0b0G1v0.0:011z1B1D1B0v1J1L1H0v0J1k0v0g0+160U0x0M0F0;0r011N1x010k0(0G0F0M0o0G1H1*1,1;1P1@1L1`1|0_0a0S0V0J0z0x0z0U0i190F0S0!1(0J0J0G0m2h1c1 0F1k0c1$2u1Z1#1!1I0s210;1D0F1_2e1H1s1u0,1O2E0i2G0F0z2K1H0x2n1k2s2u2Y0|1+2i2M1=2R0J100b0_0S0X2r2$0`2#202(1P2*2,2.0r2;1,2?2s2D012{0M2-040S0e2 2t0{322_0;35370S0Y3b312$333h2.0T3l3d3n3f340z2+362.0f3s2@2%1w2`3x2|380N3C3e3F3g3H3z380j3L3u3N3w3y3i0O3T2^3V3p040X0q3!3E2N3W3I0X2:1d2=3t3#3-3%0X2~3=303@3,2)3P370X3a3}3c3D3o420_0X3k463m3^413X4b3r4e3 494i3(3B4e1n2W1c2K2x0s1#2C3v0m2S1}1k4v1l4t2!4r4B0!2X3U3-0y0_0!0k3l483v0u2.4T3M3_0k0_2R0o0R2n0w0}1t1,0v4Y4N1=0^040d4:4g2`0_0U4_401P4?0A0W3+334W380S584~330U0s0_02030e0O0D5f5h5j5g5i0P1_0C0z0i1M1L0S4%4)1M4,0C4.2j1M0m0G170i0S2n2V0G0U1_0v0B0S1+0J0S4}4l4U3V5c2.580S1_0S0M0x0x1D0t0Q5C5v2V0z0m0B0s5Q2k1L2p0Q2n0L5k5i605m5l3s5#0S5X3_0_2n0}0b0$4/4e674Z1=0z0_0p3l6h4;1P0U0X5e5n635i655#682)0_0m1z0k0k2n6n6z1P6k046m6g6I3g4|5a3v4?0H6R3V0o0i0_3*4r6i500_0E6x596$6P044B0o0x0v0G6H6,016K6M2Y6o4`0;6X4b6*6}4 0;4P040k3x6@6p6-0i7a6~6_562P7e74340R6a1,0K6?6#7b014?4^7r7f703(6V3-4?0l7j3o7m04247A4=0_7v2!6^0F6Q7w7k51526n0666666O01760i4S6N7O7Q7N7s6T7J4{047d7R334?6)7(7s6`6{2=733o6B6D6F7q7+7f4?534l7X897~3v7P6.0z6:6=7E3v6`8i3$6B8f6;837}7Z6K0I8l3-7y3;6|7W8a7Z765G5N7.0;86728a8b8m046b0Q6d0M6f6|8s0_0I7|308L3_7G0U1Z8G7t7L8(8d6/8p8(518v6j8V8;7/6C7$827V8K7Y7)6.816G7_7f8k937k8d5V847S0_6U7=8c0_7;9a7?6(8|8}6+7s8,8o8h9633958T6^8x727Z8d5{0v5}0G0w8_6E929v7`6l8@3g8#8%9e3V7u8+8n8g8q307Z8:9s8j8?9!8M9G8{6g8A9n7f8d8O8Q8S8r6^8t8X2t8Z6A7H2o9C4*9)9I3?8~7s762n9 1b9%698N5M8P6e3C0c4K0G2u5L2u4F2v4x1c2yaq0M1Kaj4u1t2?0c0!0$0(0U04.
+</div><script type="text/javascript">
+CONFIG.needMermaid = false;
+CONFIG.overlordClasses = ["Terminal", "Ide"];
+globalThis.PAGE_IDES_CONFIG = '.\x1el(36h8iyf,c0mS={2dqwtj_x}pko)]v-ne[+r.ga79Rub5: s14I\x1e0p010H0r0g0u0B0K0w0O0S0l0X0T0T0O0i0P0q0T0N0S0d0q0l0f0X100Y0N0r0N0l0i0r0r0T0H0k0r0d0l0|1g0q0k010U0V0!0z0h0w0G0N0m0H1l0V010W0v0w0X0F0W0R0v0H0u1C0X0L1p010j1x0H0G0E0w0k0B0G0u1Q0u1w010k0a0N0W0W0V0n0u0N0k0A0U090G0V1@0V09011`1`0V0b0Z1W0H0K0i1.0H1_0R0l0l0H0l0V0r09282a0P0k0K0g0K26150G1*0a002f290H0P0G1V0k2t2h0C1_1{2E1=1^2d0H0i0V0w0w0g0G0(2M0b0W0H0a0i0C1m2T2V0L2M0W0u0A0o0I0D2G1^0r2J0V0z0R0W0e2S2U0i1O0E2X0V2Z0i2#0w2%0A0L0N0z0z1Q0r0b2}2-1@2/2K0z0B0z2_2V2~2m0u0R0K1?3032341L3j0b0C3e2I2K0g0W0w0H0m0z0u0h3l2W1m3o3q1?2x0u2 2`3u2(1N1P1R0w1X0K0m1T1V1X1W1!3X012?223(213+1m013g0V0E0B3D2O3E1Y0K0N1W0W0b140v1O0x2X3A0L4c3-1U0K0+1U3=1Z3@3_3{3}2p3F1W4143450r470V491;1?1^3S0o0V2+3A0i0*0V0g4J1?4s0M0H0b0a1Q4u0v0C4a4A2H1@0g2K0x4L0V460I0g0D4z4Y4.0V0u36383a0b0g3z4X0V3O3r4:3-2=0S0a0g0k3!0H2%0W1!1(2T0K3S4n0W3~4q0u4s0u440I0I0X1O0q0D1O0I5r5t0l5s4E5x5y0l2C0o4D5u1O0c2,1s1)225e3|5g4p40425l0b5n5p0V5v4E5Y0I5x5w0D5y0X5D5F5x3-2T2j1H56585a5L5d3`5O5h5R4t5V5q5y5u615$5z5(1O5C0V5E5Z5H5J5b5M5`4o3 4r5S5m5o605t5!645#660V5*695,0D500B2%563$3;3*4k1x6y6A4i6E1!036M6N6O6P6Q6P3-0H0x1$0R2/0r1w2+1O0#6V0a6X0$0w1u0u0e0B0r591m6#1P6(6*0r0w0A0t6=4E5y011p6.1V0w530S6 0I721q7759711p0z0g0w0t0e0(1v1m0G0R0a0a6$2m55530m0(1w0F5W017k7m763D6F6@010N0R0)0w0K0R0G1w240a2T6$0z0K0B0i0g4R3,6$0N0u1X3H5l762J6F0T7%7L0B760B0M0w6e5d1w5j0R0H6$4f0+2m0m3E0m1(0A1w7B0e1(1T0e1c0A0w0S0u7Q1m7~801x8c3E828i8k7R0N7T8o018q7N0H0E0H8w8t8l0V7S7U8p8d1U7P3#7}7O8y3D4q2j0h3I0$8Q7 6$8T8D7|1m8J8y870x2N2/7F0G571w0c0l6$7x0G8.0H8:8=1m0c6$2/5:1(8}7(7*3I3E753/4h6:8}247!3q7n1P0%0)0K3-2/1.0u0g0E7(8}2%0r0B7L0w4H0+5/3o6 8n6$2@0B0t0w1V0a1q7{9r75227X0K3E9B331c9E8v8x9H0K558q0e1!0T0q0q0H2b0i0k0S9/0P0P0l0q0N0c0P0Y0O0O0c0f0Y0S0Y0Y0d0d0Y0k0H0c0O0d0H0f0c1c9=0.0N0T0k0P0d0i0c0k0T0S0S0k9|8E0k0Y2v3-0u0t7?1U7T9!8K1y0u6{0A0H0h7$6^3i8(8I8waK9w9y0u1T9z7Y0i1w0~8^1x0k9z0i9/0r0S1.898m8R0y6$0$0(0*0w0car0f0q0ian0T0Y0P9|0;0P0S0O0T0P0fa;0qa20c0q0dbe0dbc9?1ea91w1o1q1s1u1!1z1B1D1F1H0q7A1LaQa{3Z6J1Y1!1$5b1+1-1/4-1^1|2E1~203#24ab272u2c2e2g2v2j2l2n422q2sb)2w2y2A2v2CbU1|4{3_2M2O2Q0w3L2~3t2$2(2*5J2H3_2=2@3L2|c33Uc53537390G3b3db|2:3i3k303n1H3P3T2!ch3w3k4`c92:8T3G3I3Kcs3Ncu4~3Rcw31ch6T3Z3#3%bK3?6G6$9c6DbL4l2:2x0m0S2m330R9s5S2S4W2H00c=0Q1Q4n264R0Vc%c)261Ec-1W2I0Vab6)4K2m7W571Yb@0P2;0N0K2 3A1Q4(38530s0R5S0Vc{7W0B2zb;b(2udd2/dq1c3p2m0Lc=2s4{2m1E0a1-4C0Vc=3A0k7l0i0i2m692 6rdP0B7+264D0X4G4I4K2O4|424O0b4c0L2~3A2H4!dW4+6vd4dRdT0HbS4/1^1Ud!dVd:1_4{2H2U2Te0e14|577qdL0V0J4De60J0Ve6d?4/dQ4!d~e54ce7ed1^d:3A4R0kdC8}e6ekevemeodHefdK7(ei4DeBeD8ees2m3A4}4MeLdL4e0*9d4j1!3_c}c*d09t1Wc/ecdFc@1R3|c`26e*c c,e-3Sdzd5c,eed92T1Wdcdedg0Wdi1?cjdmdod2dr7Xdudxdw2hd3eQ9idEdOeKdJeh4Dfq2HerdSdU4D0WdX4{e38XdVd%4{9B4J4%4N4P5W4R0Gc/d=e81^d^fBd`6afxd~ece1fE1XdVf%26em0Xew4/ead ep4.dIegeNej2 5j0bf*2CemfZdUf=4Yg1d#d_0Df.exf*fGeAdB9ieSfyg62%0Kf}dZ8Xf d|eT26eVeYf_ePgec*g5gsdCeXfs7(500R52545=5l5@5c3Se`c+d10u0b000X0q0X0X005+dNgVgTgUdG9Pc|dZc~gOe}gR0cgVgXd{gSbkgW5.9Y5;1X5?3@g(gNe,c.gSgUgWgYgSgV9-gW1=g g*e+e|h2g/h5g=0Xg@006Ha!cScZcV01hnhq6F016Rhxhy6M6T6_6Y6!716U6W6Y6,1H6/6;hEa{hC6+6}797f0h748{7d6!7b7F7801hT7h7j7l1X1w7p7r7t1c7F7x6F7A6$7D1X7F2%hN1x7K7M7O8H8*7V7X7Z7#3@3-97cF7,4R0i7/7;7M0a7^7`5^6F9Ga,e#8B856,888a6$8AdQ8g8G8Z8yiwip8ji2aWiB8d2m8D8FiEaJiH8r9y219na^8!1xcE0G8V8X6ZiT8S3E8%6Fi31x8,8|8~6 8@8_2Oi-538;i/92g`957`7)ib9a8{cY1U8/9g6)2m1!a|9m9oaz9r9th`aYa.a~9D1H9F8R9H6/9K9M9Oil0g9R4g0*9Vjig`gJ8)iG9$9(1(9*3@0igU1725142/0f9?ad100T0la00laAag2b0=0f0fan0i9 0X0-0?0cbc0?0O160c0Y0qahah0l0TgT0caDaF3(aIjB9#1x9w6|aPaR6%aTi)jCk3aMaZa#a!a%a)2981a.a:a=1/iA0y0y.'
+</script><script src="../js-per-pages/0-generic-python-snippets-pyodide.js" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" type="module"></script>
+
+<script src="../js-per-pages/1-error_logs-pyodide.js" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" type="module"></script>
+
+<script src="../js-per-pages/1-packagesInstaller-install-pyodide.js" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" type="module"></script>
+
+<script src="../js-per-pages/1-runtimeManager-runtime-pyodide.js" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" type="module"></script>
+
+<script src="../js-per-pages/2-pyodideSectionsRunner-runner-pyodide.js" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" type="module"></script>
+
+<script src="../js-per-pages/3-terminalRunner-term.js" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" type="module"></script>
+
+<script src="../js-per-pages/4-0-ideManager-ide.js" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" type="module"></script>
+
+<script src="../js-per-pages/4-ideLogistic-ide.js" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" type="module"></script>
+
+<script src="../js-per-pages/4-ideRunner-ide.js" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" type="module"></script>
+
+<script src="../js-per-pages/start-pyodide.js" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  <div class="md-copyright_pyodide">
+    
+      <div class="md-copyright__highlight">
+        <p xmlns:cc="http://creativecommons.org/ns#"
+xmlns:dct="http://purl.org/dc/terms/">Partage ou adaptation possible selon les conditions de la
+licence <a
+href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1"
+target="_blank" rel="license noopener noreferrer"
+style="display:inline-block;"> CC BY-NC-SA 4.0 <img
+style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img
+style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img
+style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img
+style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p>
+
+      </div>
+    
+    
+  </div>
+  
+    <div class="md-copyright_pyodide">
+      <div>
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      <div id="pyodide-footer">
+        <a href="https://gitlab.com/frederic-zinelli/pyodide-mkdocs-theme" target="_blank" rel="noopener">
+          Pyodide MkDocs Theme
+        </a> v.4.3.2
+      </div>
+    </div>
+  
+</div>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+
+
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+<script src="../js-scripts/overlord.js" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" type="module"></script>
+
+<script src="../js-scripts/subscriptions.js" crossorigin="anonymous" referrerpolicy="no-referrer" charset="utf-8" type="module"></script>
+
+
+
+  </body>
+</html>
