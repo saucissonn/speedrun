@@ -1,0 +1,294 @@
+# Voici un exemple presque complet de configuration pour un fichier
+# mkdocs.yml utilisant pyodide-mkdocs-theme.
+
+site_url: ""
+site_name: "NSI SPEEDRUN"
+# site_description: "(optionnel)"
+# repo_url: "(optionnel)"
+# edit_uri_template: "(optionnel)"
+
+# Copyright "CC BY-NC-SA"
+copyright: |
+  <p xmlns:cc="http://creativecommons.org/ns#"
+  xmlns:dct="http://purl.org/dc/terms/">Partage ou adaptation possible selon les conditions de la
+  licence <a
+  href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1"
+  target="_blank" rel="license noopener noreferrer"
+  style="display:inline-block;"> CC BY-NC-SA 4.0 <img
+  style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+  src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img
+  style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+  src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img
+  style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+  src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img
+  style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+  src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p>
+
+
+docs_dir: docs
+
+nav:
+  - "Accueil": index.md
+  - "En construction": ex_test.md
+  - "Sujet 1": sj_1.md
+  - "Sujet 2": sj_2.md
+  - "Sujet 3": sj_3.md
+  - "Sujet 4": sj_4.md
+  - "Sujet 5": sj_5.md
+  - "Sujet 6": sj_6.md
+  - "Sujet 7": sj_7.md
+  - "Sujet 8": sj_8.md
+  - "Sujet 9": sj_9.md
+  - "Sujet 10": sj_10.md
+  - "Sujet 11": sj_11.md
+  - "Sujet 12": sj_12.md
+  - "Sujet 13": sj_13.md
+  - "Sujet 14": sj_14.md
+  - "Sujet 15": sj_15.md
+  - "Sujet 16": sj_16.md
+  - "Sujet 17": sj_17.md
+  - "Sujet 18": sj_18.md
+  - "Sujet 19": sj_19.md
+  - "Sujet 20": sj_20.md
+  - "Sujet 21": sj_21.md
+  - "Sujet 22": sj_22.md
+  - "Sujet 23": sj_23.md
+  - "Sujet 24": sj_24.md
+  - "Sujet 25": sj_25.md
+  - "Sujet 26": sj_26.md
+  - "Sujet 27": sj_27.md
+  - "Sujet 28": sj_28.md
+  - "Sujet 29": sj_29.md
+  - "Sujet 30": sj_30.md
+  - "Sujet 31": sj_31.md
+  - "Sujet 32": sj_32.md
+  - "Sujet 33": sj_33.md
+  - "Sujet 34": sj_34.md
+  - "Sujet 35": sj_35.md
+  - "Sujet 36": sj_36.md
+  - "Sujet 37": sj_37.md
+  - "Sujet 38": sj_38.md
+  - "Sujet 39": sj_39.md
+  - "Sujet 40": sj_40.md
+  - "Sujet 41": sj_41.md
+  - "Sujet 42": sj_42.md
+  - "Sujet 43": sj_43.md
+  - "Sujet 44": sj_44.md
+  - "Sujet 45": sj_45.md
+  - "Sujet 46": sj_46.md
+  - "Sujet 47": sj_47.md
+  - "Sujet 48": sj_48.md
+
+# Pour supprimer certains fichiers markdown de la navigation (pattern shell):
+# not_in_nav: |
+#   */**/*.md
+
+
+# exclude_docs: Nécessite mkdocs 1.6+ pour fonctionner correctement. Sinon, vous pouvez
+# utiliser le plugin mkdocs-exclude à la place.
+# Ne surtout pas mettre de commentaires sur la ligne d'exclusion des fichiers python... !
+# (exclure les fichiers python n'affecte pas les "python_libs")
+exclude_docs: |
+  **/*_REM.md
+  **/*.py
+
+
+# Configuration du thème:
+theme:
+  name: pyodide-mkdocs-theme
+  
+# features:
+#   - navigation.instant    # Ne surtout pas activer cette option !
+
+
+
+# Configuration minimale pour les plugins
+plugins:
+    - pyodide_macros:
+        args:
+            IDE:
+                SANS: ""
+                WHITE: ""
+                REC_LIMIT: -1
+                SHOW: ""
+                MERMAID: false
+                AUTO_RUN: false
+                MAX: 5
+                LOGS: true
+                MODE: null
+                MIN_SIZE: 3
+                MAX_SIZE: 30
+                TERM_H: 10
+                TEST: ""
+                TWO_COLS: false
+                STD_KEY: ""
+                EXPORT: false
+
+            terminal:
+                SANS: ""
+                WHITE: ""
+                REC_LIMIT: -1
+                SHOW: ""
+                MERMAID: false
+                AUTO_RUN: false
+                TERM_H: 10
+                FILL: ""
+
+            py_btn:
+                SANS: ""
+                WHITE: ""
+                REC_LIMIT: -1
+                SHOW: ""
+                ICON: ""
+                HEIGHT: null
+                WIDTH: null
+                SIZE: null
+                TIP: "Exécuter le code"
+                TIP_SHIFT: 50
+                TIP_WIDTH: 0.0
+                WRAPPER: "div"
+                MERMAID: false
+                AUTO_RUN: false
+
+            run:
+                SANS: ""
+                WHITE: ""
+                REC_LIMIT: -1
+                SHOW: ""
+                MERMAID: false
+
+            multi_qcm:
+                description: ""
+                hide: false
+                multi: false
+                shuffle: false
+                shuffle_questions: false
+                shuffle_items: false
+                admo_kind: "!!!"
+                admo_class: "tip"
+                qcm_title: "Question"
+                tag_list_of_qs: null
+                DEBUG: false
+                SHOW: ""
+
+            figure:
+                div_id: "figure1"
+                div_class: ""
+                inner_text: "Votre tracé sera ici"
+                admo_kind: "!!!"
+                admo_class: "tip"
+                admo_title: "Votre figure"
+                p5_buttons: null
+                SHOW: ""
+
+        build:
+            deprecation_level: "error"
+            encrypted_js_data: true
+            forbid_macros_override: true
+            ignore_macros_plugin_diffs: false
+            limit_pypi_install_to: null
+            load_yaml_encoding: "utf-8"
+            macros_with_indents: []
+            meta_yaml_allow_extras: false
+            meta_yaml_encoding: "utf-8"
+            python_libs: ["py_libs"]
+            skip_py_md_paths_names_validation: false
+            tab_to_spaces: -1
+
+        ides:
+            ace_style_dark: "tomorrow_night_bright"
+            ace_style_light: "crimson_editor"
+            deactivate_stdout_for_secrets: true
+            decrease_attempts_on_user_code_failure: "editor"
+            editor_font_family: "monospace"
+            editor_font_size: 15
+            encrypt_alpha_mode: "direct"
+            encrypt_corrections_and_rems: true
+            export_zip_prefix: ""
+            export_zip_with_names: false
+            forbid_corr_and_REMs_with_infinite_attempts: true
+            forbid_hidden_corr_and_REMs_without_secrets: true
+            forbid_secrets_without_corr_or_REMs: true
+            show_only_assertion_errors_for_secrets: false
+
+        qcms:
+            forbid_no_correct_answers_with_multi: true
+
+        terms:
+            cut_feedback: true
+            stdout_cut_off: 200
+
+        testing:
+            empty_section_fallback: "skip"
+            include: "null"
+            load_buttons: null
+            page: "test_ides"
+
+        force_render_paths: ""
+        include_dir: ""
+        include_yaml: []
+        j2_block_end_string: ""
+        j2_block_start_string: ""
+        j2_comment_end_string: ""
+        j2_comment_start_string: ""
+        j2_variable_end_string: ""
+        j2_variable_start_string: ""
+        module_name: "main"
+        modules: []
+        on_error_fail: false
+        on_undefined: "keep"
+        render_by_default: true
+        verbose: false
+
+
+markdown_extensions:
+
+  # Extensions indispensables pour le thème:
+  - md_in_html              # !!REQUIS!!
+  - admonition              # !!REQUIS!! Blocs colorés:  !!! info "ma remarque"
+  - attr_list               # !!REQUIS!! Un peu de CSS et des attributs HTML, ex: { #id .class style="display:none" }
+  - pymdownx.details        # !!REQUIS!! Admonition: ??? -> peuvent se déplier ; ???+ -> peuvent se replier.
+  - pymdownx.emoji:         # !!REQUIS!! Émojis:  :boom: (utilisé dans les terminaux)
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight      # !!REQUIS!! Coloration syntaxique du code
+  - pymdownx.inlinehilite   # !!REQUIS!! Coloration syntaxique pour les "code spans": `#!python  code_python`
+  - pymdownx.snippets:      # !!REQUIS!! Inclusion de fichiers externe.
+      check_paths: true     # Fortement conseillé !
+  - pymdownx.superfences:   # !!REQUIS!!
+      custom_fences:        # (custom_fences: uniquement si vous comptez utiliser mermaid)
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.arithmatex:    # !!REQUIS!! Pour LaTex
+      generic: true
+  - pymdownx.striphtml:
+      strip_js_on_attributes: false     # !!REQUIS!!
+      strip_attributes: ""              # !!REQUIS!!
+
+  # Extensions conseillées:
+  - abbr
+  - def_list                # Les listes de définition.
+  - footnotes               # Notes[^1] de bas de page.  [^1]: ma note.
+  - pymdownx.caret          # Passage ^^souligné^^ ou en ^exposant^.
+  - pymdownx.mark           # Passage ==surligné==.
+  - pymdownx.tilde          # Passage ~~barré~~ ou en ~indice~.
+  - pymdownx.keys           # Touches du clavier:  ++ctrl+d++
+  - pymdownx.tasklist:      # Cases à cocher  - [ ]  et - [x]
+      custom_checkbox: false
+      clickable_checkbox: true
+  - pymdownx.tabbed:        # Volets glissants:  === "Mon volet"
+      alternate_style: true # Meilleure compatibilité pour mobiles
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  # - toc:
+  #     toc_depth: 0        # Si vous voulez supprimer la ToC (table of content) des pages
+
+
+
+# Si mkdocs est lancé en mode strict (mkdocs ... --strict), les warnings lèveront une erreur
+# en utilisant ces réglages :
+validation:
+  omitted_files: warn
+  unrecognized_links: warn
