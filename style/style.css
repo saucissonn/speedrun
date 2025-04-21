@@ -1,0 +1,61 @@
+.md-sidebar--secondary {
+  display: none !important;
+}
+
+@media (min-width: 1024px) {
+  .md-grid {
+    width: 90% !important;
+  }
+}
+
+/* Chronomètre en haut à gauche, fixé */
+#chrono {
+  position: fixed;
+  top: 6px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 6px 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: monospace;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  z-index: 9999;
+}
+
+#chrono-start-btn {
+  position: fixed;
+  top: 6px;
+  right: 10px;
+  z-index: 9999;
+  background: #444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  font-family: sans-serif;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  transition: background 0.2s ease;
+}
+
+#chrono-start-btn:hover {
+  background: #000;
+}
+
+
+#split-box {
+  position: fixed;
+  top: 50px;
+  right: 10px;
+  background: #444;
+  padding: 10px;
+  font-family: monospace;
+  font-size: 0.85rem;
+  max-height: 80vh;
+  overflow-y: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 9998;
+}
