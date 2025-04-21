@@ -9,7 +9,7 @@ class Stack:
 ##########################
 # --- PYODIDE:code --- #
 
-def recherche(lst):
+def recherche(lst, v):
     ...
 
 # --- PYODIDE:ignore --- #

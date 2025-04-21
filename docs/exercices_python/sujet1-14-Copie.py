@@ -21,7 +21,7 @@ def paire_6(tab):
 import random
 def lancer(n):
     tlancer = []
-    for i in range(6):
+    for i in range(n):
         tlancer.append(random.randint(1,6))
     return tlancer
 
@@ -35,31 +35,24 @@ def paire_6(tab):
 ##########################
 # --- PYODIDE:tests --- #
 lancer1 = lancer(5)
-assert lancer1 == [5, 6, 6, 2, 2]
-assert paire_6(lancer1)
-lancer2 = lancer(5)
-assert lancer2 == [6, 5, 1, 6, 6]
-assert paire_6(lancer2)
-lancer3 = lancer(3)
-assert lancer3 == [2, 2, 6]
-assert not paire_6(lancer3)
-lancer4 = lancer(0)
-assert lancer4 == []
-assert not paire_6(lancer4)
+for i in range(5):
+    assert 0 <= lancer1[i] <= 6
+    assert len(lancer1) == 5
 # --- PYODIDE:ignore --- #
 ##########################
 # --- PYODIDE:secrets --- #
 lancer1 = lancer(5)
-assert lancer1 == [5, 6, 6, 2, 2]
-assert paire_6(lancer1)
-lancer2 = lancer(5)
-assert lancer2 == [6, 5, 1, 6, 6]
-assert paire_6(lancer2)
-lancer3 = lancer(3)
-assert lancer3 == [2, 2, 6]
-assert not paire_6(lancer3)
-lancer4 = lancer(0)
-assert lancer4 == []
-assert not paire_6(lancer4)
+for i in range(5):
+    assert 0 <= lancer1[i] <= 6
+    assert len(lancer1) == 5
+lancer2 = lancer(1)
+for i in range(1):
+    assert 0 <= lancer2[i] <= 6
+    assert len(lancer2) == 1
+lancer3 = lancer(6)
+while not lancer3.count(6) > 1:
+    lancer3 = lancer(6)
+assert paire_6(lancer3)
+    
 # --- PYODIDE:post --- #
 ##########################

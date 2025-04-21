@@ -1,6 +1,12 @@
 # Voici un exemple presque complet de configuration pour un fichier
 # mkdocs.yml utilisant pyodide-mkdocs-theme.
 
+extra_css:
+  - style/style.css
+
+extra_javascript:
+  - style/chrono.js
+
 site_url: ""
 site_name: "NSI SPEEDRUN"
 # site_description: "(optionnel)"
